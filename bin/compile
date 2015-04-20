@@ -64,8 +64,8 @@ topic "Writing profile script"
 mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF >$BUILD_DIR/.profile.d/000_apt.sh
 export PATH="\$HOME/.apt/usr/bin:\$PATH"
-export LD_LIBRARY_PATH="\$HOME/.apt/lib:\$HOME/.apt/lib32:\$HOME/.apt/usr/lib32:\$LD_LIBRARY_PATH"
-export LIBRARY_PATH="\$HOME/.apt/lib:\$HOME/.apt/lib32:\$HOME/.apt/usr/lib32:\$LIBRARY_PATH"
+export LD_LIBRARY_PATH="\$HOME/.apt/lib32:\$HOME/.apt/lib:\$HOME/.apt/usr/lib32:\$LD_LIBRARY_PATH"
+export LIBRARY_PATH="\$HOME/.apt/lib32:\$HOME/.apt/lib:\$HOME/.apt/usr/lib32:\$LIBRARY_PATH"
 export INCLUDE_PATH="\$HOME/.apt/usr/include:\$INCLUDE_PATH"
 export CPATH="\$INCLUDE_PATH"
 export CPPPATH="\$INCLUDE_PATH"
@@ -73,8 +73,8 @@ export PKG_CONFIG_PATH="\$HOME/.apt/usr/lib/pkgconfig:\$HOME/.apt/lib32/pkgconfi
 EOF
 
 export PATH="$BUILD_DIR/.apt/usr/bin:$PATH"
-export LD_LIBRARY_PATH="$BUILD_DIR/.apt/lib:$BUILD_DIR/.apt/lib32:$BUILD_DIR/.apt/usr/lib32:$LD_LIBRARY_PATH"
-export LIBRARY_PATH="$BUILD_DIR/.apt/lib:$BUILD_DIR/.apt/lib32:$BUILD_DIR/.apt/usr/lib32:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$BUILD_DIR/.apt/lib32:$BUILD_DIR/.apt/lib:$BUILD_DIR/.apt/usr/lib32:$LD_LIBRARY_PATH"
+export LIBRARY_PATH="$BUILD_DIR/.apt/lib32:$BUILD_DIR/.apt/lib:$BUILD_DIR/.apt/usr/lib32:$LIBRARY_PATH"
 export INCLUDE_PATH="$BUILD_DIR/.apt/usr/include:$INCLUDE_PATH"
 export CPATH="$INCLUDE_PATH"
 export CPPPATH="$INCLUDE_PATH"
